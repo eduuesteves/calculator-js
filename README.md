@@ -1,4 +1,4 @@
----
+<!--
 title: "Calculator JS"
 description: "Uma calculadora moderna e minimalista em JavaScript"
 author: "Eduardo Esteves"
@@ -6,7 +6,7 @@ tags: ["javascript", "calculadora", "frontend", "web"]
 date: 2025-10-05
 version: "2.0"
 license: "MIT"
----
+-->
 
 # 🧮 Calculator JS
 
