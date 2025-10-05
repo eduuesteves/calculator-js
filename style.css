@@ -1,56 +1,131 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(90deg, blue, green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  transition: background 0.3s;
 }
 
-.content {
-    width: 400px;
-    height: 500px;
-    background: rgba(250, 250, 250, 0.5);
-    padding: 1rem;
-    border-radius: 15px;
-    color: white
+.calculator {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-h1 {
-    text-align: center;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-p {
-    height: 35px;
-    padding: .5rem 1rem;
-    margin: 1rem;
-    background: white;
-    color: black;
-    text-align: right;
-    border-radius: 10px;
-
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #fff;
 }
 
-.box {
-    margin: 1rem;
-    width: 335px;
-    height: 350px;
+.display {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
 }
 
-td {
-    font-size: 18px;
-    padding: 1.5rem 2.2rem;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+#history {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  min-height: 18px;
 }
 
-td:hover {
-    background: rgba(0, 0, 0, 0.8);
+#output {
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+.accent {
+  background: #00bcd4;
+}
+
+.gray {
+  background: rgba(255,255,255,0.2);
+}
+
+.equals {
+  background: #4caf50;
+  grid-column: span 1;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+/* Tema claro */
+body.light {
+  background: linear-gradient(135deg, #f0f0f0, #d9e4f5);
+  color: #000;
+}
+
+
+
+body.light .calculator {
+  background: rgba(255,255,255,0.8);
+  color: #000;
+}
+
+body.light button {
+  color: #000;
+}
+
+.light button.btn {
+    background: rgb(195, 195, 195);
+}
+
+.light .display {
+    background: rgb(195, 195, 195);
 }
